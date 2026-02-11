@@ -1,4 +1,5 @@
 import type {WPPost} from "../types";
+import {Link} from "react-router-dom";
 
 interface PostCardProps {
     post: WPPost;
@@ -9,13 +10,15 @@ export default function PostCard({post}: PostCardProps){
 
     return(
         <div className="card border rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all 
-                        grid"
+                        flex flex-col h-full"
             >
             {image && <img src={image} alt="post.title.rendered" className="w-full h-48 object-cover"/>}
             <div className="p-5 h-full flex flex-col justify-between">
                 <h2 className="text-xl font-bold mb-2" dangerouslySetInnerHTML={{__html: post.title.rendered}}/>
                 <p className="flex-1 mb-4" dangerouslySetInnerHTML={{__html: post.excerpt.rendered}}/>
-                <p className="text-blue-500">Read More</p>
+                <Link to={`/post/${post.slug}`} className="text-blue-500">
+                        Read More
+                </Link>
             </div>
             
         </div>

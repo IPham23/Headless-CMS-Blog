@@ -13,4 +13,5 @@ export interface WPPost{
     excerpt: {rendered: string};
     content: {rendered: string};
     _embedded?: Embedded;
+    slug: {rendered: string}
 }
