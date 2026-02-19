@@ -6,22 +6,23 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: 		#01303f;
+  background-color: 	#EFFAFF;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --accent: #02577a;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color:#0B14B2;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #0C2BDF;
 }
 
 body{
@@ -36,12 +37,11 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: 	#02577a;
 }
 button:focus,
 button:focus-visible {

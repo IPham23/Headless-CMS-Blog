@@ -16,6 +16,7 @@ export interface WPPost{
     slug: {rendered: string}
     categories: number[];
     class_list: string[];
+    tags: number[];
 }
 
 export interface WPCategories{
@@ -23,4 +24,10 @@ export interface WPCategories{
     name: string;
     slug: string;
     count: number;
+}
+
+export interface WPTags{
+    id: number;
+    name: string;
+    slug: string;
 }

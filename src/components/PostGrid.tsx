@@ -1,14 +1,15 @@
 import PostCard from "./PostCard";
-import type {WPPost, WPCategories} from "../types";
+import type {WPPost, WPCategories, WPTags} from "../types";
 import {useState} from "react";
 
 interface PostGridProps {
     posts: WPPost[];
     categories: WPCategories[];
+    tags: WPTags[];
 }
 
 
-export default function PostGrid({posts, categories}: PostGridProps){
+export default function PostGrid({posts, categories, tags}: PostGridProps){
 
     const [filter, setFilter] = useState<number | string>("All");
 
@@ -27,8 +28,8 @@ export default function PostGrid({posts, categories}: PostGridProps){
 
                 {categories
                 .filter(cat => cat.name.toLowerCase() !== "uncategorized")
-                .map((c, index, array) => (
-                    <button className={index === array.length - 1 ? "col-span-2" : ""}
+                .map((c) => (
+                    <button 
                         key={c.id} onClick={() => setFilter(c.id)}>
                         {c.name}
                     </button>
@@ -45,7 +46,7 @@ export default function PostGrid({posts, categories}: PostGridProps){
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 auto-rows-fr">
                 {filteredPosts.map(post => (
-                <PostCard key={post.id} post={post} />
+                <PostCard key={post.id} post={post} tags={tags}/>
             ))}
         </div>
         </>
