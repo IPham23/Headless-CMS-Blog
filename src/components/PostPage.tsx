@@ -17,7 +17,25 @@ export default function PostPage(){
         .then(data => setPost(data[0]))
     }, [slug]);
 
-    if (!post) return <p>Loading...</p>
+    /**
+     * Mimic page post while loading
+     */
+    if (!post) return (
+        <div className="max-w-3xl mx-auto p-8 animate-pulse">
+            {/* title */}
+            <div className="h-8 bg-(--accent)/20 rounded w-3/4 mb-4"/>
+            {/* meta */}
+            <div className="h-4 bg-(--accent)/20 rounded w-1/4 mb-8"/>
+            {/* content lines */}
+            <div className="space-y-3">
+                <div className="h-3 bg-(--accent)/20 rounded w-full"/>
+                <div className="h-3 bg-(--accent)/20 rounded w-full"/>
+                <div className="h-3 bg-(--accent)/20 rounded w-5/6"/>
+                <div className="h-3 bg-(--accent)/20 rounded w-full"/>
+                <div className="h-3 bg-(--accent)/20 rounded w-4/6"/>
+            </div>
+        </div>
+    );
 
 
     const imageUrl = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
