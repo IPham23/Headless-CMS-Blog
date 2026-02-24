@@ -27,7 +27,7 @@ export default function PostGrid({posts, categories, tags}: PostGridProps){
         <>
         <div className=" xl:px-30 pb-10 gap-4">
             <div className="grid grid-cols-2 justify-center pb-5 gap-5
-                            md:flex">
+                            lg:flex">
                 <button onClick={() => setFilter("All")}
                         className={filter === "All" 
                             ? "bg-(--accent) text-(--bg)" 
@@ -51,7 +51,7 @@ export default function PostGrid({posts, categories, tags}: PostGridProps){
 
             {filterByTags !== "All" && (
                 <div className="flex justify-center items-center gap-5 pb-5">
-                    <span>
+                    <span className="text-xl max-md:text-lg">
                         Filtering by tag: 
                         <strong> {tags.find(t => t.id === filterByTags)?.name}</strong>
                     </span>
@@ -65,8 +65,8 @@ export default function PostGrid({posts, categories, tags}: PostGridProps){
                        placeholder="Search posts..."
                        value={search}
                        onChange={(e) => setSearch(e.target.value)}
-                       className="px-5 py-2 border border-gray-500 rounded-full
-                                  focus:outline-none focus:ring-2 focus:ring-gray-500"
+                       className="px-5 py-2 border border-(--accent) rounded-full 
+                                  focus:outline-none focus:ring-2 focus:ring-(--accent)"
                 />
     
                 <IoMdClose 

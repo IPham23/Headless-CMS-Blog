@@ -21,7 +21,7 @@ export default function PostPage(){
      * Mimic page post while loading
      */
     if (!post) return (
-        <div className="max-w-3xl mx-auto p-8 animate-pulse">
+        <div className="max-w-5xl mx-auto p-8 animate-pulse">
             {/* title */}
             <div className="h-8 bg-(--accent)/20 rounded w-3/4 mb-4"/>
             {/* meta */}
@@ -41,26 +41,32 @@ export default function PostPage(){
     const imageUrl = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
     return(
         <>
-            <div className="flex flex-col flex-1 items-center justify-center p-5">
-                <div className="self-start">
+            <div className="flex flex-col flex-1 items-center justify-center p-5 lg:px-20 xl:py-20
+                            text-(--text) gap-5">
+                <div className="xl:px-30 flex self-start">
                     <Link to={`/`}>
-                        <button>BACK</button>
+                        <button className="text-(--text) border-(--accent)! border-2!
+                                           hover:bg-(--accent) hover:text-(--bg) hover:border-(--card-title)!">
+                            BACK
+                        </button>
                     </Link>
                     
                 </div>
-                <div className="max-w-3xl h-full flex flex-col justify-center">
-                    {imageUrl && <img src={imageUrl} alt={post.title.rendered} />}
+                <div className="max-w-5xl h-full flex flex-col justify-center">
+                    {imageUrl && <img src={imageUrl} alt={post.title.rendered} 
+                                      className="w-full sm:h-80 lg:h-100 2xl:h-130 object-cover mb-6 lg:mb-10"/>}
                     <h1 
-                        className="text-3xl font-bold mb-6"
+                        className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 lg:mb-10 tracking-loose"
                         dangerouslySetInnerHTML={{__html: post.title.rendered}}></h1>
-                    <div className="        
+                    <div className="text-base xl:text-lg        
                     [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-2
                     [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-2
                     [&_li]:mb-1
                     [&_p]:mb-5
                     [&_h1]:text-2xl [&_h1]:font-bold [&_h1]:mb-2
                     [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mb-2
-                    [&_strong]:font-bold
+                    [&_strong]:font-bold [&_strong]:text-(--accent) 
+                    [&_em]:text-(--accent)
                     [&_em]:italic
                     [&_a]:text-blue-500 [&_a]:underline
                     "

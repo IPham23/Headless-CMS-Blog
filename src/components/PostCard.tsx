@@ -48,7 +48,7 @@ export default function PostCard({post, tags, onTagClick}: PostCardProps){
                 <div className="pb-5">
                     <Link 
                         to={`/post/${post.slug}`} 
-                        className="text-blue-500"
+                        className="readmore"
                     >
                         Read More
                     </Link>
@@ -67,10 +67,11 @@ export default function PostCard({post, tags, onTagClick}: PostCardProps){
                             style={{
                                 background,
                                 color,
-                                transition: "transform 0.2s, filter 0.2s",
+                                transition: "filter 0.2s, scale 0.2s",
                             }}
                             onClick={() => onTagClick(tag.id)}
-                            className="px-3 py-1 rounded-full text-sm! font-medium hover:brightness-95 hover:scale-105"
+                            className="px-3 py-1 rounded-full text-sm! 
+                                       font-medium hover:brightness-95 hover:scale-105"
                             >
                             {tag.name}
                             </button>

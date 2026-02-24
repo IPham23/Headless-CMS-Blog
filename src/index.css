@@ -13,34 +13,59 @@
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 
-  --accent: #02577a;
+  --accent: #0688c0;
   --text:#01303f;
   --bg:#EFFAFF;
 
   /*CARD COLORS*/
-  --card-bg: #EFFAFF;
+  --card-bg: #FFFFFF;
   --card-border:#01303f;
   --card-title: #01303f;
   --card-text: #02577a;
+  /*SWITCH COLORS*/
+  --toggle-bg: #c8d8ec;        /* slate-200 */
+  --toggle-icon: #77a9ee;      /* slate-500 */  
+
 }
 
-a {
+.dark{
+  --accent: #3fd2ff;
+  --text: #eaf6ff;
+  --bg: #0f172a;        /* slate style */
+
+  /*CARD COLORS*/
+  --card-bg: #1e293b;   /* slate-800 vibe */
+  --card-border: #334155;
+  --card-title: #ffffff;
+  --card-text: #cbd5e1;
+
+  /*SWITCH COLORS*/
+  --toggle-bg: #334155;        /* slate-700 */
+  --toggle-icon: #729dd8;      /* slate-400 */
+
+}
+
+.readmore {
   font-weight: 500;
-  color:#0B14B2;
+  color:#666df5;
   text-decoration: inherit;
 }
-a:hover {
+.readmore:hover {
   color: #0C2BDF;
 }
 
 h1, h2, h3 {
-    font-family: var(--font-heading);
+  font-family: var(--font-heading);
 }
 
 body {
-    font-family: var(--font-body);
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.card{
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
 
 button {
   border-radius: 8px;
