@@ -24,5 +24,5 @@ How it works:
 3. The UI renders content dynamically.
 
 How to run locally:
-npm install
-npm run dev
+1. npm install
+2. npm run dev
