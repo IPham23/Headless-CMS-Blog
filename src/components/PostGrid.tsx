@@ -86,8 +86,8 @@ export default function PostGrid({posts, categories, tags}: PostGridProps){
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 items-stretch">
-                {filteredPosts.map(post => (
-                <PostCard key={post.id} post={post} tags={tags} onTagClick={setFilterByTags}/>
+                {filteredPosts.map((post, index) => (
+                <PostCard key={post.id} post={post} tags={tags} onTagClick={setFilterByTags} isPriority={index === 0}/>
             ))}
         </div>
         </>

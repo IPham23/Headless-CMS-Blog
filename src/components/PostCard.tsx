@@ -5,9 +5,10 @@ interface PostCardProps {
     post: WPPost;
     tags: WPTags[];
     onTagClick: (tagId: number) => void;
+    isPriority?: boolean;
 }
 
-export default function PostCard({post, tags, onTagClick}: PostCardProps){
+export default function PostCard({post, tags, onTagClick, isPriority = false}: PostCardProps){
     const media = post._embedded?.['wp:featuredmedia']?.[0];
 
     // Use a display-appropriate size instead of the full source_url
@@ -44,7 +45,8 @@ export default function PostCard({post, tags, onTagClick}: PostCardProps){
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 648px"
                         alt={media?.alt_text || post.title.rendered}
                         className="w-full h-full object-cover"
-                        loading="lazy"
+                        loading={isPriority ? "eager" : "lazy"}
+                        fetchPriority={isPriority ? "high" : "low"}
                         decoding="async"
                         width={648}
                         height={432}
