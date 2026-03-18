@@ -7,7 +7,7 @@ export default function Navbar() {
 
     return(
         <>
-            <div className="py-5 px-5 lg:px-20 flex justify-center max-lg:flex-col-reverse">
+            <header className="py-5 px-5 lg:px-20 flex justify-center max-lg:flex-col-reverse">
                 <h1 className="text-3xl md:text-4xl xl:text-5xl font-bold text-center text-(--text)">Welcome to my Blog</h1>
 
                 {/*THEME BUTTOM */}
@@ -24,7 +24,7 @@ export default function Navbar() {
                         <div className="text-2xl pr-1">☀️</div>
                     </div>
                 </div>
-            </div>
+            </header>
         </>
     )
 }

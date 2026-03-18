@@ -51,6 +51,10 @@
   color: #055f91;
   text-decoration: inherit;
 }
+
+.dark .readmore{
+  color: #5ddcff;
+}
 .readmore:hover {
   color: #0C2BDF;
 }
