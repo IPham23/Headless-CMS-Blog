@@ -42,7 +42,7 @@ export default function PostCard({post, tags, onTagClick, isPriority = false}: P
                     <img
                         src={imageSrc}
                         srcSet={srcSet}
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 648px"
+                        sizes="(max-width: 640px) 100vw, 648px"
                         alt={media?.alt_text || post.title.rendered}
                         className="w-full h-full object-cover"
                         loading={isPriority ? "eager" : "lazy"}
