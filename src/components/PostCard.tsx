@@ -27,8 +27,8 @@ export default function PostCard({post, tags, onTagClick}: PostCardProps){
     const getTagColor = (tagId: number) => {
         const hue = (tagId * 137.508) % 360;
         return {
-            background: `hsl(${hue}, 60%, 85%)`,
-            color: `hsl(${hue}, 60%, 30%)`,
+            background: `hsl(${hue}, 50%, 90%)`,
+            color: `hsl(${hue}, 60%, 20%)`,
         };
     };
 
