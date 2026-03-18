@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
 import { useParams, Link } from "react-router-dom";
 import type {WPPost} from "../types";
+import {getPost} from "../api/wordpress";
 
 
 export default function PostPage(){
@@ -8,11 +9,10 @@ export default function PostPage(){
     const [post, setPost] = useState<WPPost | null>(null);
 
     useEffect(() => {
-        fetch(
-            `https://public-api.wordpress.com/wp/v2/sites/coladillaheadlessdemo.wordpress.com/posts?slug=${slug}&_embed`
-        )
-        .then(res => res.json())
-        .then(data => setPost(data[0]))
+        if (!slug) return;
+        getPost(slug)
+            .then(setPost)
+            .catch(console.error);
     }, [slug]);
 
     if (!post) return (
