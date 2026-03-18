@@ -17,36 +17,33 @@
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 
-  --accent: #0688c0;
-  --text:#01303f;
-  --bg:#EFFAFF;
+/* LIGHT MODE */
+  --accent: #056291;        /* darken slightly: #0571a0 → #055f91 */
+  --text: #012530;
+  --bg: #EFFAFF;
 
-  /*CARD COLORS*/
   --card-bg: #FFFFFF;
-  --card-border:#01303f;
-  --card-title: #01303f;
-  --card-text: #02577a;
-  /*SWITCH COLORS*/
-  --toggle-bg: #c8d8ec;        /* slate-200 */
-  --toggle-icon: #77a9ee;      /* slate-500 */  
+  --card-border: #012530;
+  --card-title: #012530;
+  --card-text: #014d6b;      /* passes at 5.1:1 */
+
+  --toggle-bg: #c8d8ec;
+  --toggle-icon: #77a9ee;
 
 }
 
-.dark{
-  --accent: #3fd2ff;
-  --text: #eaf6ff;
-  --bg: #0f172a;        /* slate style */
+.dark {
+  --accent: #5ddcff;
+  --text: #f0faff;
+  --bg: #0f172a;
 
-  /*CARD COLORS*/
-  --card-bg: #1e293b;   /* slate-800 vibe */
-  --card-border: #334155;
+  --card-bg: #1e293b;
+  --card-border: #475569;
   --card-title: #ffffff;
-  --card-text: #cbd5e1;
+  --card-text: #e2eaf3;
 
-  /*SWITCH COLORS*/
-  --toggle-bg: #334155;        /* slate-700 */
-  --toggle-icon: #729dd8;      /* slate-400 */
-
+  --toggle-bg: #334155;
+  --toggle-icon: #729dd8;
 }
 
 .readmore {

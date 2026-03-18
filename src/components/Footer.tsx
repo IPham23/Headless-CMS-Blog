@@ -13,26 +13,30 @@ export default function Footer() {
                     <a href="https://www.linkedin.com/in/christian-coladilla-86494a264/"
                        target="_blank"
                        className="transition-scale duration-300 ease-in-out hover:scale-110
-                                  transition-filter hover:brightness-120">
+                                  transition-filter hover:brightness-120"
+                       aria-label="LinkedIn profile">
                         <FaLinkedin size={36} />
                     </a>
                     <a href="https://github.com/IPham23/"
                        target="_blank"
                        className="transition-scale duration-300 ease-in-out hover:scale-110
-                                  transition-filter hover:brightness-120">
+                                  transition-filter hover:brightness-120"
+                       aria-label="Github profile">
                         <FaGithub size={36} />
                     </a>
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=iancoladilla23@gmail.com&su=Website%20Inquiry&body=Hi%20Christian,"
                        target="_blank"
                        rel="noopener noreferrer"
                        className="transition-scale duration-300 ease-in-out hover:scale-110
-                                  transition-filter hover:brightness-120">
+                                  transition-filter hover:brightness-120"
+                       aria-label="Gmail">
                         <SiGmail size={36} />
                     </a>
                     <a href="https://coladilla-portfolio.vercel.app/"
                        target="_blank"
                        className="transition-scale duration-300 ease-in-out hover:scale-110
-                                  transition-filter hover:brightness-120">
+                                  transition-filter hover:brightness-120"
+                       aria-label="My portfolio">
                         <CgWebsite size={36} />
                     </a>
                 </div>
