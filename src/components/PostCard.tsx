@@ -51,6 +51,7 @@ export default function PostCard({post, tags, onTagClick}: PostCardProps){
                         className="readmore"
                     >
                         Read More
+                    <span className="sr-only"> about {post.title.rendered}</span>
                     </Link>
                 </div>
             </div>
