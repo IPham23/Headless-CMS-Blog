@@ -19,10 +19,6 @@ export default function Blog(){
                     getTags(),
                 ]);
 
-                console.log("Fetched posts: ", postsData);
-                console.log("Fetched categories: ", categoriesData);
-                console.log("Fetched tags: ", tagsData);
-
                 setPosts(postsData);
                 setCategories(categoriesData);
                 setTags(tagsData);
